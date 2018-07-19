@@ -1,0 +1,45 @@
+{
+  "name": "e_auto_update",
+  "version": "1.0.0",
+  "description": "an example to user auto update",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "build --mac --win -p always"
+  },
+  "build":{
+    "publish": [{
+      "provider":"github",
+      "owner": "iahmedani",
+      "repo":"e-auto-update"
+    }],
+    "appId":"com.github.iahmedani.eelectronupdate",
+    "mac": {
+      "category": "your.app.category.type",
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    }
+  },
+  "keywords": [
+    "elctron",
+    "electron",
+    "auto",
+    "update"
+  ],
+  "author": "iahmedani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iahmedani/e-auto-update/issues"
+  },
+  "homepage": "https://github.com/iahmedani/e-auto-update#readme",
+  "devDependencies": {
+    "electron": "^2.0.5",
+    "electron-builder": "^20.22.0"
+  },
+  "dependencies": {
+    "electron-log": "^2.2.16",
+    "electron-updater": "^3.0.3"
+  }
+}
