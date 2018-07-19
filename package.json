@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "build --win -p always",
+    "publish": "npm run clean && build --win -p always",
     "clean": "rm -rf ./dist"
   },
   "build":{
