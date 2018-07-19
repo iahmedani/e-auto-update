@@ -1,11 +1,12 @@
 {
   "name": "e_auto_update",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "an example to user auto update",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "build --mac --win -p always"
+    "publish": "build --win -p always",
+    "clean": "rm -rf ./dist"
   },
   "build":{
     "publish": [{
@@ -20,6 +21,10 @@
         "zip",
         "dmg"
       ]
+    },
+    "win": {
+      "title": "Imran App",
+      "icon": "assests/win/logo.ico"
     }
   },
   "keywords": [
